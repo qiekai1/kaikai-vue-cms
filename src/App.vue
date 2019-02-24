@@ -42,7 +42,8 @@
 <style lang="scss" scoped>
   .app-container{
     padding-top: 40px;
-		// overflow-x: hidden;  这个样式实现 动画切换的过程中 底部导航栏不出现 滚动条
+	padding-bottom: 50px;
+	 overflow-x: hidden;  //这个样式实现 动画切换的过程中 底部导航栏不出现 滚动条
   }
 
 

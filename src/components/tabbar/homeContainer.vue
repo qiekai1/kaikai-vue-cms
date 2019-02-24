@@ -44,7 +44,7 @@
 </template>
 
 <script> 
-    import {Toast} from 'mint-ui'
+    import {Toast} from 'mint-ui';
 
     export default {
         data(){
@@ -57,7 +57,8 @@
         },
         methods: {
             getlunbotu(){
-                this.$http.get('http://www.liulongbin.top:3005/api/getlunbo').then(result => {
+                // 注意: 已经定义了 全局的基地址之后,这里在api前面不可以再用 / 了; vue-resource中 是不可以用 / 的
+                this.$http.get('api/getlunbo').then(result => {
                     console.log(result.body);
                     if(result.body.status === 0){
                         // 如果成功了, 把获取到的数据 放在  轮播图数组中
