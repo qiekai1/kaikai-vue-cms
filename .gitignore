@@ -1,0 +1,9 @@
+# 这是忽略上传的文件
+
+node_modules
+
+.idea
+
+.vscode
+
+.git
