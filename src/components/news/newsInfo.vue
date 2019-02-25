@@ -15,19 +15,13 @@
 
         
         <!-- 评论子组件区域 -->
-        <comment-box></comment-box>
+        <comment-box :id="this.id"></comment-box>
     </div>
 </template>
 
 <script> 
-
 import comment from '../subcomments/comment.vue'
-
 import {Toast} from 'mint-ui'
-
-
-
-
     export default {
         data(){
             return {
@@ -45,7 +39,6 @@ import {Toast} from 'mint-ui'
                 + this.id).then(result => {
                     if(result.body.status === 0) {
                         this.newsInfo = result.body.message[0]
-
                         Toast('获取新闻成功')
                     }else{
                         Toast('获取新闻失败')
@@ -76,7 +69,6 @@ import {Toast} from 'mint-ui'
              justify-content: space-between;
          }
     .content{
-
     }
  }
 </style>

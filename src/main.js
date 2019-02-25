@@ -23,19 +23,19 @@ Vue.filter('dateFormat',function(dataStr, pattern="YYYY-MM-DD : hh:mm:ss"){
 
 
 
-
-
-
-
-
 // 2.1导入 vue-resource 包   这是从接口中获取数据 必使用的包
 import VueResource from 'vue-resource'
 // 2.1安装
 Vue.use(VueResource)
 
+
+
 // 配置获取数据的  url基地址
 Vue.http.options.root = 'http://www.liulongbin.top:3005'    
 //注意这句定义全局的基地址的 要在引入vue-resource之后使用
+
+// 配置全局的 post向服务器提交数据时候的  表单数据的格式
+Vue.http.options.emulatedJson = true
 
 
 // 按需导入mint-ui组件:  header  轮播图
