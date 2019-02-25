@@ -45,7 +45,9 @@
 	padding-bottom: 50px;
 	 overflow-x: hidden;  //这个样式实现 动画切换的过程中 底部导航栏不出现 滚动条
   }
-
+.mint-header{
+	z-index: 99;
+}
 
 // 把 	.v-enter  	.v-leave-to 这两个样式 分开写, 实现的是 刚开始动画 从左侧进来.,出去的时候还是从左侧出去
 	.v-enter,

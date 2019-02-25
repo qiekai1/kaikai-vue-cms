@@ -39,11 +39,19 @@ Vue.http.options.emulatedJson = true
 
 
 // 按需导入mint-ui组件:  header  轮播图
-import { Header, Swipe, SwipeItem, Button } from 'mint-ui';
-Vue.component(Header.name, Header);
-Vue.component(Swipe.name, Swipe);
-Vue.component(SwipeItem.name, SwipeItem);
-Vue.component(Button.name, Button);
+// import { Header, Swipe, SwipeItem, Button ,Lazyload } from 'mint-ui';
+// Vue.component(Header.name, Header);
+// Vue.component(Swipe.name, Swipe);
+// Vue.component(SwipeItem.name, SwipeItem);
+// Vue.component(Button.name, Button);
+// Vue.use(Lazyload);  // 这个是图片展示的列表的组件
+
+// 懒加载处理:
+// 按需导入 mint-ui会有些样式并没有加载出来,就是"懒加载",还是全部导入,全部导入 注意还要导入一个样式文件
+import MintUi from 'mint-ui'
+Vue.use(MintUi)
+import 'mint-ui/lib/style.css'
+
 
 // 制作底部小图标的时候,使用的mui的样式文件
 import './lib/mui/css/mui.min.css'
